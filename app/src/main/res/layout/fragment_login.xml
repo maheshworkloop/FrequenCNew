@@ -14,13 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardCornerRadius="19dp"
+        app:cardBackgroundColor="#F7595858"
+        android:alpha="0.97"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/blurbackground"
             android:padding="10dp">
 
             <ImageView

@@ -23,6 +23,8 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:cardBackgroundColor="#F7595858"
+            android:alpha="0.97"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:cardCornerRadius="17dp"
@@ -31,8 +33,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="10dp"
-                android:background="@drawable/blurbackground">
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="match_parent"

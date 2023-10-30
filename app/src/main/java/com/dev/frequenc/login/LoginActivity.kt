@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,7 @@ class LoginActivity : AppCompatActivity(), DataChangeListener {
     private val loginFragment = LoginFragment()
     private val verifyOtpFragment = VerifyOtpFragment()
     private var userTypeFragment = UserTypeFragment()
+    private lateinit var layoutview : View
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -204,6 +206,9 @@ class LoginActivity : AppCompatActivity(), DataChangeListener {
     }
 
     fun addORReplaceFragment(fragmentTag: String, fragment: Fragment) {
+        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+
+        inputMethodManager.hideSoftInputFromWindow(supportFragmentManager.fragments.last().requireView().windowToken, 0)
         if (supportFragmentManager.findFragmentByTag(fragmentTag) == null) {
             addFragment(fragmentTag, fragment)
         } else {

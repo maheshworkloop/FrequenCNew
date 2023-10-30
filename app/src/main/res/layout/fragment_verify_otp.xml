@@ -23,13 +23,14 @@
             app:cardCornerRadius="27dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:cardBackgroundColor="#F7595858"
+            android:alpha="0.97"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/blurbackground"
                 android:padding="10dp">
 
                 <ImageView
@@ -66,7 +67,7 @@
                     <com.goodiebag.pinview.Pinview
                         android:layout_width="match_parent"
                         android:id="@+id/otpLays"
-                        android:layout_height="0dp"
+                        android:layout_height="70dp"
                         android:orientation="horizontal"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:pinLength="6"
@@ -74,7 +75,7 @@
                         app:forceKeyboard="true"
                         app:hint="0"
                         app:inputType="number"
-                        app:layout_constraintHeight_percent="0.5"
+                        app:layout_constraintHeight_percent="0.1"
                         app:password="false"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +91,7 @@
                     android:text="Resend Otp"
                     android:textColor="@color/white"
                     android:textSize="19sp"
+                    android:layout_marginEnd="21dp"
                     app:layout_constraintEnd_toEndOf="@id/otpLays"
                     app:layout_constraintTop_toBottomOf="@id/otpLays" />
 
